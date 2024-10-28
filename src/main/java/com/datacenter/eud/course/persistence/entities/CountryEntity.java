@@ -32,7 +32,7 @@ public class CountryEntity {
 	@JoinColumn(name = "REGION_ID", referencedColumnName = "REGION_ID")
 	private RegionEntity region;
 	
-	@OneToMany(targetEntity = LocationEntity.class, fetch = FetchType.EAGER, mappedBy = "country")
+	@OneToMany(targetEntity = LocationEntity.class, fetch = FetchType.LAZY, mappedBy = "country")
 	@JsonIgnore
 	private List<LocationEntity> locations;
 } 

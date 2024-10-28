@@ -12,9 +12,7 @@ import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
-import lombok.ToString;
 
 @Entity
 @Table(name = "LOCATIONS")
@@ -42,7 +40,5 @@ public class LocationEntity {
 
 	@ManyToOne(fetch = FetchType.LAZY, targetEntity = CountryEntity.class, optional = false)
 	@JoinColumn(name = "COUNTRY_ID", referencedColumnName = "COUNTRY_ID")
-	@ToString.Exclude
-	@EqualsAndHashCode.Exclude
 	private CountryEntity country;
 }

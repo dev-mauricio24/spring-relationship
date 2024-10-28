@@ -10,6 +10,6 @@ import com.datacenter.eud.course.persistence.entities.EmployeeEntity;
 
 @Repository
 public interface EmployeeRepository extends CrudRepository<EmployeeEntity, Long> {
-
+	// Ejemplo consultas top dinámica
 	List<EmployeeEntity> findAll(Pageable pageable);
 }

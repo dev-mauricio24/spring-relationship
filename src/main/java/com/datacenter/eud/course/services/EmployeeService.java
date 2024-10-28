@@ -12,7 +12,7 @@ import com.datacenter.eud.course.dto.EmployeeJobDTO;
 public interface EmployeeService {
 	
 	public List<EmployeeDTO> findAll();
-	public List<EmployeeDTO> findAll(int limit);
+	public List<EmployeeDTO> findAll(int limit); // top dinámica
 	public EmployeeDTO findById(Long id);
 	public EmployeeJobDTO findEmployeeJobById(Long id);
 	
